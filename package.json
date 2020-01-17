@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
+    "bcrypt": "*",
     "body-parser": "*",
     "express": "*",
     "global": "*",
@@ -25,8 +25,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "path": "^0.12.7",
-    "react-scripts": "^2.1.1",
-    "sass": "^1.15.1",
+    "react-scripts": "*",
     "sequelize": "^4.41.2",
     "socket.io": "^2.2.0"
   }
