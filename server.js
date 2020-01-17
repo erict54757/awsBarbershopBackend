@@ -4,7 +4,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const path = require("path");
-const PORT = 4433;
+const PORT = 443;
 
 const app = express();
 const http = require("http");
@@ -17,14 +17,7 @@ const passport = require("./utils/passport");
 const routes = require("./routes");
 const bcrypt = require('bcrypt');
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  
-  app.use(express.static("client/build"));
 
-  
-
-}
 
 // Define middleware here
 // app.use(express.urlencoded({ extended: true }));
