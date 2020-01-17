@@ -11,7 +11,7 @@ router.use("/api", Passport.authenticate('jwt', {session: false}), apiRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+  res.status(404).send("you got it!")});
+
 
 module.exports = router;
