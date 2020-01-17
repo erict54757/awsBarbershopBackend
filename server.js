@@ -111,7 +111,7 @@ app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.send("hello")
   res.status(404).send("your on the right track")
 });
