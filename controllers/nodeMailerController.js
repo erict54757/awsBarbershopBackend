@@ -20,7 +20,7 @@ module.exports = {
         service: 'gmail',
         auth: {
           user: 'barbershoptesting@gmail.com',
-          pass: '@admin18'
+          pass: 'qhpbeshyuawgyxcl'
         }
       });
 
@@ -62,7 +62,7 @@ module.exports = {
         service: 'gmail',
         auth: {
           user: 'barbershoptesting@gmail.com',
-          pass: '@admin18'
+          pass: 'qhpbeshyuawgyxcl'
         }
       });
 
@@ -104,7 +104,7 @@ module.exports = {
         service: 'gmail',
         auth: {
           user: 'barbershoptesting@gmail.com',
-          pass: '@admin18'
+          pass: 'qhpbeshyuawgyxcl'
         }
       });
 
@@ -143,7 +143,7 @@ module.exports = {
         service: 'gmail',
         auth: {
           user: 'barbershoptesting@gmail.com',
-          pass: '@admin18'
+          pass: 'qhpbeshyuawgyxcl'
         }
       });
       console.log(req.body.email);
