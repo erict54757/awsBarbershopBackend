@@ -20,7 +20,7 @@ const bcrypt = require('bcrypt');
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   
-  app.use(express.static("client/build"));
+  res.status(404).send("you got it!");
 
   
 
