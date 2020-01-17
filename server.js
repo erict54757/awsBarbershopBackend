@@ -4,7 +4,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const path = require("path");
-const PORT = 443;
+const PORT = 4433;
 
 const app = express();
 const http = require("http");
@@ -112,8 +112,7 @@ app.use(routes);
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
-  res.send("hello")
-  res.status(404).send("your on the right track")
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 
