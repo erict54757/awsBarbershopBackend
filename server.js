@@ -101,8 +101,8 @@ app.post("/login", async (req, res) => {
     }
   }
 });
- server.listen(443, function() {
-      console.log(`🌎 ==> Server now on port ${443}!`);
+ server.listen(PORT, function() {
+      console.log(`🌎 ==> Server now on port ${PORT}!`);
     });
 io.on('connection',SocketManager);
 
