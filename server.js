@@ -4,7 +4,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = 4433;
 
 const app = express();
 const http = require("http");
