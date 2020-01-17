@@ -4,7 +4,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const path = require("path");
-const PORT = 443;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 const http = require("http");
@@ -17,7 +17,14 @@ const passport = require("./utils/passport");
 const routes = require("./routes");
 const bcrypt = require('bcrypt');
 
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  
+  app.use(express.static("client/build"));
 
+  
+
+}
 
 // Define middleware here
 // app.use(express.urlencoded({ extended: true }));
@@ -104,7 +111,7 @@ app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hello")
   res.status(404).send("your on the right track")
 });
