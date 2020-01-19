@@ -4,7 +4,7 @@ const moment = require("moment");
 
 module.exports = {
   incoming: function (req, res) {
-    console.log(res.header)
+    console.log("hello", res.header)
     nodemailer.createTestAccount((err, account) => {
       const htmlEmail = `
       
