@@ -5,10 +5,14 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const PORT = 9000;
-
+const fs = require('fs');
 const app = express();
-const http = require("http");
-const server = http.createServer(app);
+const https = require("https");
+const options = {
+  key: fs.readFileSync('./file.pem'),
+  cert: fs.readFileSync('./file.crt')
+};
+const server = https.createServer(options, app);
 const socketIo = require("socket.io");
 var io =socketIo(server);
 const SocketManager= require("./SocketManager")
