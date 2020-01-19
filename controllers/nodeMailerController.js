@@ -38,9 +38,9 @@ module.exports = {
       })
 
     })
-     res.header("Access-Control-Allow-Origin", "*");  
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    // res.setHeader("Access-Control-Allow-Origin", "*");
+    //  res.header("Access-Control-Allow-Origin", "*");  
+    // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    // // res.setHeader("Access-Control-Allow-Origin", "*");
     console.log(res.header)
     return  res.json("success email incoming");
     // res.header("Access-Control-Allow-Origin", "*");  
