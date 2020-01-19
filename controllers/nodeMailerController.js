@@ -38,8 +38,15 @@ module.exports = {
       })
 
     })
-    return res.json("success email incoming")
-  },
+     res.header("Access-Control-Allow-Origin", "*");  
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    // res.setHeader("Access-Control-Allow-Origin", "*");
+    return   res.json("success email incoming");
+    // res.header("Access-Control-Allow-Origin", "*");  
+    // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    
+    
+    },
   confirmation: function (req, res) {
     console.log(req.body,"emaillllll",req.body.slot[req.body.service-1])
     nodemailer.createTestAccount((err, account) => {
