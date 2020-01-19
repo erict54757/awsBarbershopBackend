@@ -10,9 +10,10 @@ const fs = require('fs');
 const app = express();
 const https = require("https");
 const options = {
-  key: fs.readFileSync('./file.pem'),
-  cert: fs.readFileSync('./file.crt')
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('server.cert')
 };
+
 const server = https.createServer(options, app);
 const socketIo = require("socket.io");
 var io =socketIo(server);
