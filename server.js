@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const PORT = 9000;
+const cors = require('cors');
 const fs = require('fs');
 const app = express();
 const https = require("https");
@@ -20,6 +21,9 @@ const db = require("./models");
 const passport = require("./utils/passport");
 const routes = require("./routes");
 const bcrypt = require('bcrypt');
+
+// allow any origin for cors policy
+app.use(cors());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
