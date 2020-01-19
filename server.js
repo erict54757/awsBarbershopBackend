@@ -12,7 +12,7 @@ const https = require("https");
 const options = {
   key: fs.readFileSync('./key.pem'),
   cert: fs.readFileSync('./cert.pem'),
-  passphrase: 'YOUR PASSPHRASE HERE'
+  passphrase: 'pass'
 };
 
 const server = https.createServer(options, app);
