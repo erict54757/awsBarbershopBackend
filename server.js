@@ -10,8 +10,9 @@ const fs = require('fs');
 const app = express();
 const https = require("https");
 const options = {
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert')
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+  passphrase: 'YOUR PASSPHRASE HERE'
 };
 
 const server = https.createServer(options, app);
