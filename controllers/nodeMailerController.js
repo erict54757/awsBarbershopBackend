@@ -4,7 +4,9 @@ const moment = require("moment");
 
 module.exports = {
   incoming: function (req, res) {
-    console.log("hello", res.header)
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    // console.log("hello", res.header)
     nodemailer.createTestAccount((err, account) => {
       const htmlEmail = `
       
@@ -17,7 +19,7 @@ module.exports = {
         </ul>
         <p>${req.body.message}</p>
         `
-        console.log(res.header)
+        // console.log(res.header)
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -42,8 +44,8 @@ module.exports = {
     })
     //  res.header("Access-Control-Allow-Origin", "*");  
     // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    console.log(res.header)
+    // res.setHeader("Access-Control-Allow-Origin", "*");
+    // console.log(res.header)
     return  res.json("success email incoming");
     // res.header("Access-Control-Allow-Origin", "*");  
     // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
