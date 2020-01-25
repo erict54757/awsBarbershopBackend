@@ -13,9 +13,9 @@ module.exports = {
       <img src="https://mighty-cliffs-91335.herokuapp.com/static/media/background2.3d0ad4b3.jpg">
         <h3 style={color:white}>Contact Details<h3>
         <ul>
-        <li>email:${req.body.email}</li>
-        <li>email:${req.body.subject}</li>
-        <li>email:${req.body.phoneNumber}</li>
+        <li>${req.body.email}</li>
+        <li>${req.body.subject}</li>
+        <li>${req.body.phoneNumber}</li>
         </ul>
         <p>${req.body.message}</p>
         `
@@ -66,7 +66,7 @@ module.exports = {
             <li>We have you booked on ${req.body.date} at the time of  ${moment().hour(9).minute(0).add(req.body.slot[0] / 4, 'hours').format('h:mm A')} to
             ${ moment().hour(9).minute(0).add((req.body.slot[req.body.service-1]/ 4)+.25 , 'hours').format('h:mm A')}.</li>
 
-            <li>Visit us again at https://mighty-cliffs-91335.herokuapp.com/.</li>
+            <li>Visit us again at https://master.d1xorfpsynb8u9.amplifyapp.com/.</li>
           
             </ul>
             `
@@ -108,7 +108,7 @@ module.exports = {
             <li>We have you booked on ${req.body.date} at the time of  ${moment().hour(9).minute(0).add(req.body.slot[0] / 4, 'hours').format('h:mm A')} to
             ${ moment().hour(9).minute(0).add((req.body.slot[req.body.service-1]/ 4)+.25 , 'hours').format('h:mm A')}.</li>
 
-            <li>Visit us again at https://mighty-cliffs-91335.herokuapp.com/.</li>
+            <li>Visit us again at https://master.d1xorfpsynb8u9.amplifyapp.com/.</li>
           
             </ul>
             `
