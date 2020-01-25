@@ -8,14 +8,14 @@ const PORT = 9000;
 const cors = require('cors');
 const fs = require('fs');
 const app = express();
-const https = require("https");
+const https = require("http");
 // const options = {
 //   key: fs.readFileSync('./key.pem'),
 //   cert: fs.readFileSync('./cert.pem'),
 //   passphrase: 'pass'
 // };
 
-const server = https.createServer(app);
+const server = http.createServer(app);
 const socketIo = require("socket.io");
 var io =socketIo(server);
 const SocketManager= require("./SocketManager")
